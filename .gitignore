@@ -1,0 +1,9 @@
+# Dependecies
+node_modules/
+
+# Build specific
+platforms/
+
+# App content - to be added as separate repository
+www/
+
