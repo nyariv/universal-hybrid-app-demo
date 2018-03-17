@@ -133,7 +133,7 @@ renderer = {
             var prev = $elem.data('include-prev');
             if(prev !== val) { 
                 $elem.removeClass('loaded');  
-                $elem.load(val + '?_=' + time, {}, function(){
+                $elem.get(val + '?_=' + time, undefined, function(){
                     renderer.updateView($elem.get(0));
                     $elem.addClass('loaded');  
                 });
