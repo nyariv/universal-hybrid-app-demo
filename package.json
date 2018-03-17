@@ -1,0 +1,38 @@
+{
+  "name": "MathAddict",
+  "homepage": "http://math.addict.com",
+  "author": {
+    "name": "Nir Yariv",
+    "email": "nyariv@gmail.com",
+    "url": "http://math.addict.com"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "^19.26.0"
+  },
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron . --enable-logging",
+    "dev": "NODE_ENV='development' npm run start",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "main": "main.js",
+  "version": "0.4.0",
+  "license": "",
+  "description": "Math Addict",
+  "build": {
+    "appId": "math.addict",
+    "win": {
+      "icon": "assets/build/icon.ico"
+    },
+    "linux": {
+      "category": "Game",
+      "icon": "assets/build/linux",
+      "target": [
+        "deb",
+		"AppImage"
+      ]
+    }
+  }
+}
